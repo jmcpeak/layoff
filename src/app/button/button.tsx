@@ -1,4 +1,4 @@
-import styles from "@/app/page.module.css";
+import { Button as MuiButton } from "@mui/material";
 
 export default function Button({
 	backgroundColor = "#fff",
@@ -6,15 +6,13 @@ export default function Button({
 	primary = false,
 }) {
 	return (
-		<div className={styles.page}>
-			<button
-				name="bob"
-				primary={primary}
-				style={{ backgroundColor }}
-				type="button"
-			>
-				{label}
-			</button>
-		</div>
+		<MuiButton
+			name="bob"
+			formNoValidate={primary}
+			style={{ backgroundColor }}
+			type="button"
+		>
+			{label}
+		</MuiButton>
 	);
 }
