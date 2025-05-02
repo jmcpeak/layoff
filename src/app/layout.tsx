@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import '@/app/globals.css';
 import theme from '@/theme';
 import { ThemeProvider } from '@mui/material/styles';
+import { Analytics } from '@vercel/analytics/react';
 import type { ReactNode } from 'react';
 
 type Props = Readonly<{
@@ -30,7 +31,10 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme}>
+            {children}
+            <Analytics />
+          </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
