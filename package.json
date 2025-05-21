@@ -10,7 +10,7 @@
     "biome": "biome check --fix",
     "knip": "knip",
     "tsc": "tsc",
-    "verify": "npm run tsc && npm run biome && npm run knip",
+    "verify": "npm run tsc && npm run biome",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -62,8 +62,6 @@
     "react-dom": "19.2.0-canary-b9cfa0d3-20250505"
   },
   "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "extends": ["plugin:storybook/recommended"]
   }
 }

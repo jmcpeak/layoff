@@ -16,7 +16,6 @@ type Story = StoryObj<typeof Button>;
 export const Accessible: Story = {
   args: {
     primary: false,
-    label: 'Button',
   },
 };
 
